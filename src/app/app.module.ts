@@ -8,8 +8,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { StudentSearchComponent } from './student-search/student-search.component';
 import { Routes, RouterModule } from '@angular/router';
 import { StudentDeleteComponent } from './student-delete/student-delete.component';
+import { StudentListComponent } from './student-list/student-list.component';
 
-const myRouter:Routes=[{
+const myRouter:Routes=[
+  {
   path:"",
   component:StudentEntryComponent
 },
@@ -18,7 +20,11 @@ const myRouter:Routes=[{
   component:StudentSearchComponent
 },{
   path:"delete",
-  component:StudentDeleteComponent;
+  component:StudentDeleteComponent,
+},{
+  path:"view",
+  component:StudentListComponent,
+
 }
 ]
 
@@ -29,7 +35,8 @@ const myRouter:Routes=[{
     NavbarComponent,
     StudentEntryComponent,
     StudentSearchComponent,
-    StudentDeleteComponent    
+    StudentDeleteComponent,
+    StudentListComponent    
   ],
   imports: [
     BrowserModule,
